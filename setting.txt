@@ -1,0 +1,43 @@
+{
+    "resources" : {
+        "coal" : {} , 
+        "iron" : {} , 
+        "steel" : {} , 
+        "gun" : {} , 
+        "food" : {} ,
+        "population" : {
+            "owner" : "cons",
+            "maintainance" : {"food" : 1}
+        } 
+    },
+
+    "productionslots" : {
+        "coalmine" : {
+            "output" : {"coal" : 3}
+        },
+        "ironmine" : {
+            "output" : {"iron": 1},
+            "time" : 3
+        },
+        "steelmill" : {
+            "input" : {"iron" : 1, "coal" : 1},
+            "output" : {"steel" : 1},
+            "time" : 3
+        },
+        "grainfield" : {
+            "input" : {"population" : 1},
+            "output" : {"food" : 10, "population" : 1},
+            "time" : 23
+        },
+        "growth" : {
+            "input" : {"food" : 10},
+            "output" : {"population" : 1},
+            "time" : 33
+        },
+        "gunfactory" : {
+            "input" : {"steel" : 1, "coal" : 1, "population" : 1},
+            "output" : {"gun" : 1, "population" : 1},
+            "time" : 23
+        }
+    }
+}
